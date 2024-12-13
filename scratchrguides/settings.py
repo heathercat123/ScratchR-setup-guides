@@ -72,4 +72,4 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static/'
 
 # Distill
-DISTILL_DIR = 'build'
+DISTILL_DIR = 'docs'
