@@ -1,0 +1,482 @@
+/*
+** Stripped down scratch-wiki-skin-1.4 main.css with a few edits
+*/
+
+#column-content {
+	width: 780px;
+	padding: 0;
+}
+#content {
+	padding: 0 10px 10px 10px;
+	position: relative;
+	z-index: 2;
+	float: right;
+	width: 580px;
+}
+#column-one {
+	padding-top: 0px;
+}
+#content {
+	background: white;
+	line-height: 1.5em;
+	background-image: url(bg_content.png);
+	background-repeat: no-repeat;
+}
+/* the left column width is specified in class .portlet */
+
+/* Font size:
+** We take advantage of keyword scaling- browsers won't go below 9px
+** More at http://www.w3.org/2003/07/30-font-size
+** http://style.cleverchimp.com/font_size_intervals/altintervals.html
+*/
+
+body {
+	font: x-small sans-serif;
+	text-align: center;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+/* scale back up to a sane default */
+#globalWrapper {
+	font-size: 127%;
+	width: 780px;
+	margin: 0 auto;
+	text-align: left;
+	/*width: 100%;
+	margin: 0;*/
+	padding: 0;
+	overflow: hidden;
+}
+.visualClear {
+	clear: both;
+}
+
+/* general styles */
+
+table {
+	font-size: 100%;
+	color: black;
+	/* we don't want the bottom borders of <h2>s to be visible through
+	   floated tables */
+	background-color: white;
+}
+fieldset table {
+	/* but keep table layouts in forms clean... */
+	background: none;
+}
+a {
+	text-decoration: none;
+	color: #002bb8;
+	background: none;
+}
+a:visited {
+	color: #5a3696;
+}
+a:active {
+	color: #faa700;
+}
+a:hover {
+	text-decoration: underline;
+}
+a.stub {
+	color: #772233;
+}
+a.new, #p-personal a.new {
+	color: #ba0000;
+}
+a.new:visited, #p-personal a.new:visited {
+	color: #a55858;
+}
+
+img {
+	padding:10px;
+	width:570px;
+}
+
+p {
+	margin: .4em 0 .5em 0;
+	line-height: 1.5em;
+}
+p img {
+	margin: 0;
+}
+
+hr {
+	height: 1px;
+	color: #aaa;
+	background-color: #aaa;
+	border: 0;
+	margin: .2em 0 .2em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	background: none;
+	font-weight: normal;
+	margin: 0;
+	padding-top: .5em;
+	padding-bottom: .17em;
+	border-bottom: 1px solid #aaa;
+}
+h1 { font-size: 188%; }
+h1 .editsection { font-size: 53%; }
+h2 { font-size: 150%; }
+h2 .editsection { font-size: 67%; }
+h3, h4, h5, h6 {
+	border-bottom: none;
+	font-weight: bold;
+}
+h3 { font-size: 132%; }
+h3 .editsection { font-size: 76%; font-weight: normal; }
+h4 { font-size: 116%; }
+h4 .editsection { font-size: 86%; font-weight: normal; }
+h5 { font-size: 100%; }
+h5 .editsection { font-weight: normal; }
+h6 { font-size: 80%;  }
+h6 .editsection { font-size: 125%; font-weight: normal; }
+
+ul {
+	line-height: 1.5em;
+	list-style-type: square;
+	margin: .3em 0 0 1.5em;
+	padding: 0;
+	list-style-image: url(bullet.gif);
+}
+ol {
+	line-height: 1.5em;
+	margin: .3em 0 0 3.2em;
+	padding: 0;
+	list-style-image: none;
+}
+li {
+	margin-bottom: .1em;
+}
+dt {
+	font-weight: bold;
+	margin-bottom: .1em;
+}
+dl {
+	margin-top: .2em;
+	margin-bottom: .5em;
+}
+dd {
+	line-height: 1.5em;
+	margin-left: 2em;
+	margin-bottom: .1em;
+}
+
+fieldset {
+	border: 1px solid #2f6fab;
+	margin: 1em 0 1em 0;
+	padding: 0 1em 1em;
+	line-height: 1.5em;
+}
+fieldset.nested {
+	margin: 0 0 0.5em 0;
+	padding: 0 0.5em 0.5em;
+}
+legend {
+	padding: .5em;
+	font-size: 95%;
+}
+form {
+	border: none;
+	margin: 0;
+}
+
+textarea {
+	width: 100%;
+	padding: .1em;
+}
+
+input.historysubmit {
+	padding: 0 .3em .3em .3em !important;
+	font-size: 94%;
+	cursor: pointer;
+	height: 1.7em !important;
+	margin-left: 1.6em;
+}
+select {
+	vertical-align: top;
+}
+abbr, acronym, .explain {
+	border-bottom: 1px dotted black;
+	color: black;
+	background: none;
+	cursor: help;
+}
+q {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+}
+code {
+	background-color: #f9f9f9;
+}
+pre {
+	padding: 1em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+}
+
+/*
+** the main content area
+*/
+
+/* Some space under the headers in the content area */
+
+#bodyContent h1, #bodyContent h2 {
+	margin-bottom: .6em;
+}
+#bodyContent h3, #bodyContent h4, #bodyContent h5 {
+	margin-bottom: .3em;
+}
+#firstHeading {
+	margin-bottom: .1em;
+	/* These two rules hack around bug 2013 (fix for more limited bug 11325).
+	   When bug 2013 is fixed properly, they should be removed. */
+	line-height: 1.2em;
+	padding-bottom: 0;
+}
+
+/*
+** Structural Elements
+*/
+
+/*
+** Scratch Header
+*/
+#header {
+	margin-top: 5px;
+	width: 780px;
+	height: 85px;
+	margin-bottom: 10px;
+}
+
+.logo {
+	float: left;
+	width: 230px;
+	height: 80px;
+	background: url(logo.png);
+	background-repeat: no-repeat;
+}
+.logo a {
+	display: block; 
+	width: 100%;
+	height: 100%;
+}
+
+#nav {
+	background-color: #3060C1;
+	background-image: url(bg_nav.png);
+	background-repeat: no-repeat;
+	float: right;
+	margin: 0 0 10px 0;
+	padding: 0 5px;
+	width: 530px;
+	height: 30px;
+}
+
+#nav ul {
+	clear:both;
+	height:30px;
+	list-style-type: none;
+	display: inline;
+}
+
+#nav li {
+	height: 30px;
+	clear: both;
+	list-style-type: none;
+	display: inline;
+}
+
+#nav a{
+	font-family: "Trebuchet MS", "Luxi Sans",Verdana, Arial, Helvetica, sans-serif;
+	border-right: 1px solid #22468C;
+	color: #E7EBF7;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	padding: 2px 6px;
+	text-decoration: none;
+}
+#nav #active a{
+	color: #FFC56C;
+}
+#userbar{
+	background-image: url(bg_userbar.png);
+	background-repeat: no-repeat;
+	float: left;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 10px;
+	padding: 0 10px;
+	width: 280px;
+}
+
+#userbar a{
+	font-weight: bold;
+}
+
+#searchbar {
+	background-image: url(bg_searchbar.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	width: 210px;
+}
+
+#searchbar input{
+	max-width: 120px;
+	border: 1px solid #333333;
+	background-color: #F3F3F3;
+	color: #333333;
+	font-weight: normal;  
+	padding-left: 0;
+	padding-right: 0;
+	/*height: 20px;
+	padding: 0;
+	margin: 0;*/
+}
+#searchBar.searchButton {
+	/*height: 30px;*/
+}
+
+/*
+** general portlet styles (elements in the quickbar)
+*/
+.portlet {
+	border: none;
+	background-image: url(bg_sidebar.png);
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	padding: 10px 10px 10px 10px;
+	/*float: none;*/
+	width: 150px; /*150px + 20px padding = 170px;*/
+	overflow: hidden;
+}
+.portlet h4 {
+	font-size: 95%;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portlet h5 {
+	background: transparent;
+	display: inline;
+	height: 1em;
+	font-size: 91%;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portlet h6 {
+	background: #ffae2e;
+	border: 1px solid #2f6fab;
+	border-style: solid solid none solid;
+	padding: 0 1em 0 1em;
+	display: block;
+	font-size: 1em;
+	height: 1.2em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.pBody {
+	font-size: 95%;
+	color: black;
+	border-collapse: collapse;
+	padding: 0;
+}
+.portlet h1,
+.portlet h2,
+.portlet h3,
+.portlet h4 {
+	margin: 0;
+	padding: 0;
+}
+.portlet ul {
+	line-height: 1.5em;
+	list-style-type: square;
+	list-style-image: url(bullet.gif);
+	font-size: 95%;
+}
+.portlet li {
+	padding: 0;
+	margin: 0;
+}
+
+/*
+** Logo properties
+*/
+
+#p-logo {
+	/*top: 0;
+	left: 0;
+	position: absolute;*/ /*needed to use z-index 
+	z-index: 3;*/
+	height: 155px;
+	width: 12em;
+	overflow: visible;
+}
+#p-logo h5 {
+	display: none;
+}
+#p-logo a,
+#p-logo a:hover {
+	display: block;
+	height: 155px;
+	width: 12.2em;
+	background-repeat: no-repeat;
+	background-position: 35% 50% !important;
+	text-decoration: none;
+}
+
+/*
+** Search portlet
+*/
+#p-search {
+	position: relative;
+	z-index: 3;
+}
+input.searchButton {
+	margin-top: 1px;
+	font-size: 95%;
+}
+#searchGoButton {
+	padding-left: .5em;
+	padding-right: .5em;
+	font-weight: bold;
+}
+#searchInput {
+	width: 10.9em;
+	margin: 0;
+	font-size: 95%;
+}
+#p-search .pBody {
+	padding: .5em .4em .4em .4em;
+	text-align: center;
+}
+#p-search #searchform div div {
+	margin-top: .4em;
+	font-size: 95%;
+}
+
+/*
+** footer
+*/
+#footer {
+	clear: both;
+	width: 780px;
+	height: 30px;
+	background-image: url(bg_footer.png);
+	background-repeat: no-repeat;
+	padding-top: 7px;
+	margin-top: 15px;
+	font-size: 12px;
+	text-align: center;
+}
