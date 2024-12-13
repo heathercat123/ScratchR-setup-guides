@@ -1,0 +1,8 @@
+# This is source code, we shouldn't include compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+
+# Must use collectstatic
+static/

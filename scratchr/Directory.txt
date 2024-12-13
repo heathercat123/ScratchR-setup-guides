@@ -1,0 +1,4 @@
+ScratchR-only templates are located in /scratchr/templates/scratchr/
+HeatherscratchR-only templates are located in /scratchr/templates/heatherscratchr/
+Shared templates are located in /scratchr/templates/scratchr-shared/
+Static files are located in /scratchr/static/

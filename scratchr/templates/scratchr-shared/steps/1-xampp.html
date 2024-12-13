@@ -1,0 +1,37 @@
+{% extends 'scratchr-shared/base.html' %}
+{% load static %}
+
+{# Who decided that you can only use a block once in Django? #}
+{% block page-title %}{% block box-title %} Installing XAMPP {% endblock %}{% endblock %}
+
+{% block content %}
+
+<h3>Downloading</h3>
+<p>First of all, let's navigate to the download page. The link for it will vary depending on your operating system. Note that this guide expects you to be on Windows.</p>
+
+<ul>
+	<li><a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.7.7/">Windows</a></li>
+	<li><a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.7/">Linux</a></li>
+	<li><a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/1.7.3/">macOS / Mac OS X</a></li>
+</ul>
+
+<img src="{% static 'scratchr/img/xampp-downloads.png' %}"/>
+
+<p>All of these files may seem daunting, but in reality, we only need xampp-win32-1.7.7-VC9.zip. Click on it to start the download.</p>
+<img src="{% static 'scratchr/img/xampp-win32-1.7.7-VC9.png' %}"/>
+
+<h3>Installing</h3>
+<p>
+	Now, run it. If you get a warning saying something in the lines of "Do you want to allow this app to make changes to your device?", click Yes.
+	When it asks you to select a language, you can either select a language or keep english and then press OK.
+</p>
+<p>You are now in the installer!</p>
+<img src="{% static 'scratchr/img/xampp-setup.png' %}"/>
+
+<p>Click next, click it again, and again, then click Install.</p>
+<p>XAMPP is now installed!</p>
+<img src="{% static 'scratchr/img/xampp-setup-finished.png' %}"/>
+
+<p>It will then ask you if you want to start the XAMPP Control Panel. Click Yes, it'll be useful for later.</p>
+<h4>Now with all of this done, head to <a href="../memcached/">Installing Memcached</a></h4>
+{% endblock content %}
