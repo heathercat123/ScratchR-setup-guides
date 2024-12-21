@@ -8,4 +8,5 @@ urlpatterns = [
 	distill_path('eaccelerator/', views.eaccelerator, name='eaccelerator', distill_file='heatherscratchr/eaccelerator/index.html'),
 	distill_path('downloading/', views.downloading_heather, name='downloading_heather', distill_file='heatherscratchr/downloading/index.html'),
 	distill_path('database/', views.database, name='database', distill_file='heatherscratchr/database/index.html'),
+	distill_path('settings/', views.settings, name='settings', distill_file='heatherscratchr/settings/index.html'),
 ]

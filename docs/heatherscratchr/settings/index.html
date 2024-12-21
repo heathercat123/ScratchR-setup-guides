@@ -1,0 +1,129 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Tweaking some settings  - ScratchR Setup Guides</title>
+		<link rel="stylesheet" href="/ScratchR-setup-guides/static/scratchr/skin/style.css" type="text/css" media="screen" />
+		<link rel="shortcut icon" type="image/x-icon" href="/ScratchR-setup-guides/static/scratchr/favicon.ico">
+	</head>
+<body>
+	<div id="globalWrapper">
+	
+	<!-- SCRATCH HEADER -->
+	<div id="header">
+		<div class="logo">
+			<a href="/ScratchR-setup-guides/"></a>
+		</div>
+		
+		<ul id="nav">
+			<li><a href="/ScratchR-setup-guides/">home</a></li>
+			<li><a href="https://scratch.mit.edu/explore/projects/all/">projects</a></li>
+			<li><a href="https://scratch.mit.edu/explore/studios/all/">galleries</a></li>
+			<li id="active"><a href="https://scratch.mit.edu/contact-us/">support</a></li>
+			<li><a href="https://scratch.mit.edu/discuss/">forums</a></li>
+			<li><a href="https://scratch.mit.edu/about/">about</a></li>
+			<li><a href="https://scratch.mit.edu/">my stuff</a></li>
+		</ul>
+		
+		<div id="userbar">
+			<a href="https://scratch.mit.edu/">Login or Sign up</a> for an account		</div>
+		
+		<div id="searchbar">
+			<form action="https://scratch.mit.edu/search/projects" id="cse-search-box">
+			<div>
+				<input type="text" name="q" size="31" />
+				<input type="submit" class="search" value="search "/>
+			</div>
+</form>
+		</div>
+	</div>
+	<!-- END SCRATCH HEADER -->
+	
+	<div id="column-content">
+	
+	<div id="content">
+		<h1 id="firstHeading" class="firstHeading"> Tweaking some settings </h1>
+		<div id="bodyContent">
+		
+
+<h3>Set the memcache server</h3>
+<p>Open app\config\bootstrap.php in a text editor.</p>
+<p>Search for MEMCACHE_SERVER and replace 'scratchdb.media.mit.edu' by 'localhost'.</p>
+
+<h3>Configure Apache to point at app\webroot\</h3>
+<p>Open C:\XAMPP\APACHE\CONF\httpd.conf in a text editor.</p>
+<p>Search for "DocumentRoot".</p>
+<p>Replace "C:/xampp/htdocs" by "C:/xampp/htdocs/scratchr/app/webroot"</p>
+
+<h3>Set up a VirtualHost</h3>
+<p>Open C:\XAMPP\APACHE\CONF\EXTRA\httpd-vhosts.conf in a text editor and add this at the end:</p>
+<br/>
+<p>&lt;VirtualHost 127.0.0.1&gt;</p>
+<p>&emsp;ServerName scratch.local</p>
+<p>&emsp;ServerAlias www.scratch.local</p>
+<p>&emsp;DocumentRoot C:/xampp/htdocs/scratchr/app/webroot/</p>
+<p>&emsp;&emsp;&lt;Directory /&gt;</p>
+<p>&emsp;&emsp;&emsp;Options FollowSymLinks</p>
+<p>&emsp;&emsp;&emsp;AllowOverride All</p>
+<p>&emsp;&emsp;&emsp;RewriteEngine   On</p>
+<p>&emsp;&emsp;&emsp;Options -Multiviews  FollowSymLinks</p>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+)_(sm|med).png$ static/icons/project/default_$2.jpg [QSA,L]</p>
+<br/>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+).sb$ static/misc/default.sb [QSA,L]</p>
+<br/>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^static/icons/gallery/(.*)$ static/icons/gallery/default.jpg [QSA,L]</p>
+<br/>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).jpg$ static/icons/buddy/default_$2.jpg [QSA,L]</p>
+<br/>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).png$ static/icons/buddy/default_$2.jpg [QSA,L]</p>
+<br/>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-d</p>
+<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
+<p>&emsp;&emsp;RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]</p>
+<p>&emsp;&emsp;RewriteRule .*\.svn/.* - [F]</p>
+<p>&emsp;&lt;/Directory&gt;</p>
+<p>&lt;/VirtualHost&gt;</p>
+<br/>
+<p>The settings are now set up!</p>
+<h4>Now with all of this done, head to <a href="../testit/">Testing it out</a></h4>
+
+		</div>
+	
+	</div>
+		
+	<div id="column-one">
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/wiki/Scratch_Wiki">Main page</a></li>
+				<li id="n-portal"><a href="/wiki/Scratch_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Scratch_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		</div>
+		<!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+			
+		<div id="footer">
+			<a href="https://scratch.mit.edu/download">Download</a> | 
+			<a href="https://www.scratchfoundation.org/donate">Donate</a> | 
+			<a href="https://scratch.mit.edu/privacy_policy">Privacy Policy</a> | 
+			<a href="https://scratch.mit.edu/community_guidelines">Terms of Use</a> | 
+			<a href="https://scratch.mit.edu/terms_of_use">Copyright Policy</a> | 
+			<a href="https://scratch.mit.edu/contact-us">Contact Us </a>
+
+		</div>
+</div>
+</body>
+</html>
