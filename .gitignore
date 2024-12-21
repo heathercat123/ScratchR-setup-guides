@@ -3,5 +3,5 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Must use collectstatic
+# Must run collectstatic
 /static/

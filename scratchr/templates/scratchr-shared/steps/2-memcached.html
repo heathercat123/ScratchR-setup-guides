@@ -1,0 +1,32 @@
+{% extends 'scratchr-shared/base.html' %}
+{% load static %}
+
+{# Who decided that you can only use a block once in Django? #}
+{% block page-title %}{% block box-title %} Installing Memcached {% endblock %}{% endblock %}
+
+{% block content %}
+
+<h3>Downloading</h3>
+<p>First of all, let's navigate to the download page. The link for it will vary depending on your operating system. Note that this guide expects you to be on Windows.</p>
+
+<ul>
+	<li><a href="https://github.com/jefyt/memcached-windows/releases/latest">Windows</a></li>
+	<li><a href="https://memcached.org/downloads">Linux</a></li>
+</ul>
+
+<img src="{% static 'scratchr/img/memcached-downloads.png' %}"/>
+
+<p>All of these files may seem daunting, but in reality, we only need memcached-1.6.8-win64-mingw.zip. Click on it to start the download.</p>
+<img src="{% static 'scratchr/img/memcached-1.6.8-win64-mingw.png' %}"/>
+
+<h3>Installing</h3>
+<p>Extract the zip, open the resulting folder, then open bin.</p>
+<p>Next, click next to the current folder path and type cmd to open a Command Prompt in the current directory:</p>
+<p>GIF from <a href="https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html#downloading-macos">Dortania's OpenCore Install Guide</a></p>
+<img src="{% static 'scratchr/img/opencore-open-cmd-current-folder.gif' %}"/>
+
+<p>Run memcached -d</p>
+<p>Memcached is now running!</p>
+<p>You can close the cmd window.</p>
+<h4>Now with all of this done, head to <a href="../download/">Downloading ScratchR</a></h4>
+{% endblock content %}
