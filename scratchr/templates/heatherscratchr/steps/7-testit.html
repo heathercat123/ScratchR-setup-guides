@@ -1,0 +1,38 @@
+{% extends 'scratchr-shared/base.html' %}
+{% load static %}
+
+{# Who decided that you can only use a block once in Django? #}
+{% block page-title %}{% block box-title %} Testing it out {% endblock %}{% endblock %}
+
+{% block content %}
+
+<h3>Starting Apache</h3>
+<p>Go back to the XAMPP Control Panel from Step 1 and start Apache.</p>
+
+<h3>Opening the site</h3>
+<p>Follow <a href="http://localhost/">this link</a>. You should see the Heatherscratch home page.</p>
+<p>If you get "OMG. Scratch could not connect to memcached", make sure php_memcache is enabled in php.ini and that memcached is running.</p>
+
+<h3>Fixing profile pictures</h3>
+<p>Sign up for an account and then log in.</p>
+<p>Instead of the default pfp, you'll see "scratch code".</p>
+<p>If you try to set your pfp to something else, you'll get an error.</p>
+<p>To fix this, rename app\webroot\static\rename2icons\ to icons\.</p>
+<p>Everything should now work.</p>
+
+<h3>Setting yourself as admin</h3>
+<p>Open CMD under C:\XAMPP\MYSQL\BIN\ and run this command:</p>
+<br/><p>UPDATE users SET role = 'admin' WHERE username = 'yourusername';</p><br/>
+<p>You have to replace yourusername by your username.</p>
+<p>Log out then log back in and you should now be an admin!</p>
+<p>You can now enjoy the admin-specific stuff, such as http://localhost/administration/</p>
+
+<h4>Congratulations! You are done!</h4>
+<p>If you want to manipulate the database further, open http://localhost/phpmyadmin/ and avoid breaking anyhing!</p>
+<p>To upload projects, go to http://localhost/services/share_project</p>
+<br/>
+<p>Everything included in HeatherscratchR should now work.</p>
+<p>If you want anything that's not included in HeatherscratchR, the guides for them will come later.</p>
+<br/>
+<p><b>Heatherscratch On!</b></p>
+{% endblock content %}

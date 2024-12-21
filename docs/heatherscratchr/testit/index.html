@@ -1,0 +1,113 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Testing it out  - ScratchR Setup Guides</title>
+		<link rel="stylesheet" href="/ScratchR-setup-guides/static/scratchr/skin/style.css" type="text/css" media="screen" />
+		<link rel="shortcut icon" type="image/x-icon" href="/ScratchR-setup-guides/static/scratchr/favicon.ico">
+	</head>
+<body>
+	<div id="globalWrapper">
+	
+	<!-- SCRATCH HEADER -->
+	<div id="header">
+		<div class="logo">
+			<a href="/ScratchR-setup-guides/"></a>
+		</div>
+		
+		<ul id="nav">
+			<li><a href="/ScratchR-setup-guides/">home</a></li>
+			<li><a href="https://scratch.mit.edu/explore/projects/all/">projects</a></li>
+			<li><a href="https://scratch.mit.edu/explore/studios/all/">galleries</a></li>
+			<li id="active"><a href="https://scratch.mit.edu/contact-us/">support</a></li>
+			<li><a href="https://scratch.mit.edu/discuss/">forums</a></li>
+			<li><a href="https://scratch.mit.edu/about/">about</a></li>
+			<li><a href="https://scratch.mit.edu/">my stuff</a></li>
+		</ul>
+		
+		<div id="userbar">
+			<a href="https://scratch.mit.edu/">Login or Sign up</a> for an account		</div>
+		
+		<div id="searchbar">
+			<form action="https://scratch.mit.edu/search/projects" id="cse-search-box">
+			<div>
+				<input type="text" name="q" size="31" />
+				<input type="submit" class="search" value="search "/>
+			</div>
+</form>
+		</div>
+	</div>
+	<!-- END SCRATCH HEADER -->
+	
+	<div id="column-content">
+	
+	<div id="content">
+		<h1 id="firstHeading" class="firstHeading"> Testing it out </h1>
+		<div id="bodyContent">
+		
+
+<h3>Starting Apache</h3>
+<p>Go back to the XAMPP Control Panel from Step 1 and start Apache.</p>
+
+<h3>Opening the site</h3>
+<p>Follow <a href="http://localhost/">this link</a>. You should see the Heatherscratch home page.</p>
+<p>If you get "OMG. Scratch could not connect to memcached", make sure php_memcache is enabled in php.ini and that memcached is running.</p>
+
+<h3>Fixing profile pictures</h3>
+<p>Sign up for an account and then log in.</p>
+<p>Instead of the default pfp, you'll see "scratch code".</p>
+<p>If you try to set your pfp to something else, you'll get an error.</p>
+<p>To fix this, rename app\webroot\static\rename2icons\ to icons\.</p>
+<p>Everything should now work.</p>
+
+<h3>Setting yourself as admin</h3>
+<p>Open CMD under C:\XAMPP\MYSQL\BIN\ and run this command:</p>
+<br/><p>UPDATE users SET role = 'admin' WHERE username = 'yourusername';</p><br/>
+<p>You have to replace yourusername by your username.</p>
+<p>Log out then log back in and you should now be an admin!</p>
+<p>You can now enjoy the admin-specific stuff, such as http://localhost/administration/</p>
+
+<h4>Congratulations! You are done!</h4>
+<p>If you want to manipulate the database further, open http://localhost/phpmyadmin/ and avoid breaking anyhing!</p>
+<p>To upload projects, go to http://localhost/services/share_project</p>
+<br/>
+<p>Everything included in HeatherscratchR should now work.</p>
+<p>If you want anything that's not included in HeatherscratchR, the guides for them will come later.</p>
+<br/>
+<p><b>Heatherscratch On!</b></p>
+
+		</div>
+	
+	</div>
+		
+	<div id="column-one">
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/wiki/Scratch_Wiki">Main page</a></li>
+				<li id="n-portal"><a href="/wiki/Scratch_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Scratch_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		</div>
+		<!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+			
+		<div id="footer">
+			<a href="https://scratch.mit.edu/download">Download</a> | 
+			<a href="https://www.scratchfoundation.org/donate">Donate</a> | 
+			<a href="https://scratch.mit.edu/privacy_policy">Privacy Policy</a> | 
+			<a href="https://scratch.mit.edu/community_guidelines">Terms of Use</a> | 
+			<a href="https://scratch.mit.edu/terms_of_use">Copyright Policy</a> | 
+			<a href="https://scratch.mit.edu/contact-us">Contact Us </a>
+
+		</div>
+</div>
+</body>
+</html>

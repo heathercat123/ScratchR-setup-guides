@@ -9,4 +9,5 @@ urlpatterns = [
 	distill_path('downloading/', views.downloading_heather, name='downloading_heather', distill_file='heatherscratchr/downloading/index.html'),
 	distill_path('database/', views.database, name='database', distill_file='heatherscratchr/database/index.html'),
 	distill_path('settings/', views.settings, name='settings', distill_file='heatherscratchr/settings/index.html'),
+	distill_path('testit/', views.testit_heather, name='testit', distill_file='heatherscratchr/testit/index.html'),
 ]

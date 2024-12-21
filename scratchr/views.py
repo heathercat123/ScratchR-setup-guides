@@ -21,3 +21,9 @@ def database(request):
 
 def settings(request):
 	return render(request, "scratchr-shared/steps/6-settings.html")
+
+def testit_scratchr(request):
+	return render(request, "scratchr/steps/7-testit.html")
+
+def testit_heather(request):
+	return render(request, "heatherscratchr/steps/7-testit.html")
