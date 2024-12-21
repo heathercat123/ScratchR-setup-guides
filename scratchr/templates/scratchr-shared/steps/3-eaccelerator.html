@@ -1,0 +1,19 @@
+{% extends 'scratchr-shared/base.html' %}
+{% load static %}
+
+{# Who decided that you can only use a block once in Django? #}
+{% block page-title %}{% block box-title %} Installing eAccelerator {% endblock %}{% endblock %}
+
+{% block content %}
+
+<h3>Downloading</h3>
+<p>You can get my pre-compiled eAccelerator from <a href="{% static 'scratchr/php_eaccelerator_ts.dll' %}">here</a>.</p>
+
+<h3>Installing</h3>
+<p>Drop the downloaded file under C:\XAMPP\php\ext\ and replace the existing one</p>
+<p>Go back to your php.ini, search for eAccelerator and uncomment this line:</p>
+<br/><p>zend_extension = "C:\xampp\php\ext\eaccelerator.dll"</p><br/>
+
+<p>eAccelerator is now installed!</p>
+<h4>Now with all of this done, head to <a href="../downloading/">Downloading ScratchR</a></h4>
+{% endblock content %}

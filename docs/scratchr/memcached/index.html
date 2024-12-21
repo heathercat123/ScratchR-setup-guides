@@ -68,7 +68,28 @@
 <p>Run memcached -d</p>
 <p>Memcached is now running!</p>
 <p>You can close the cmd window.</p>
-<h4>Now with all of this done, head to <a href="../download/">Downloading ScratchR</a></h4>
+
+<h3>Downloading the Memcache PHP extension</h3>
+<p>Navigate to <a>https://pecl.php.net/package/memcache/3.0.8/windows</a>
+<img src="/ScratchR-setup-guides/static/scratchr/img/memcached-pecl-downloads.png"/>
+
+<p>All of these links may seem daunting, but in reality, we only need the 5.3 Thread Safe (TS) x86 version. Click on it to start the download.</p>
+<img src="/ScratchR-setup-guides/static/scratchr/img/memcached-pecl-5.3-ts-x86.png"/>
+
+<h3>Installing the Memcache PHP extension</h3>
+<p>Extract the zip then copy php_memcache.dll to C:\XAMPP\PHP\EXT\</p>
+<p>Add this under [PECL] in C:\XAMPP\PHP\php.ini:</p>
+<br/><p>extension=php_memcache.dll</p><br/>
+<p>Your php.ini's [PECL] section should now look like this:</p>
+<br/>
+<p>[PECL]</p>
+<p>;extension=php_ming.dll</p>
+<p>;extension=php_pdo_oci.dll</p>
+<p>;extension=php_pdo_oci8.dll</p>
+<p>extension=php_memcache.dll</p>
+<br/>
+
+<h4>Now with all of this done, head to <a href="../eaccelerator/">Installing eAccelerator</a></h4>
 
 		</div>
 	

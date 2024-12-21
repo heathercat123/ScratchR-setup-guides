@@ -6,3 +6,12 @@ def xampp(request):
 
 def memcached(request):
 	return render(request, "scratchr-shared/steps/2-memcached.html")
+
+def eaccelerator(request):
+	return render(request, "scratchr-shared/steps/3-eaccelerator.html")
+
+def downloading_scratchr(request):
+	return render(request, "scratchr/steps/4-downloading.html")
+
+def downloading_heather(request):
+	return render(request, "heatherscratchr/steps/4-downloading.html")
