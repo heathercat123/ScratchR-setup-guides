@@ -7,4 +7,5 @@ urlpatterns = [
 	distill_path('memcached/', views.memcached, name='memcached', distill_file='heatherscratchr/memcached/index.html'),
 	distill_path('eaccelerator/', views.eaccelerator, name='eaccelerator', distill_file='heatherscratchr/eaccelerator/index.html'),
 	distill_path('downloading/', views.downloading_heather, name='downloading_heather', distill_file='heatherscratchr/downloading/index.html'),
+	distill_path('database/', views.database, name='database', distill_file='heatherscratchr/database/index.html'),
 ]

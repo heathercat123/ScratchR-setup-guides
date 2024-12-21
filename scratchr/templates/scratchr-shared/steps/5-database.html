@@ -1,0 +1,30 @@
+{% extends 'scratchr-shared/base.html' %}
+{% load static %}
+
+{# Who decided that you can only use a block once in Django? #}
+{% block page-title %}{% block box-title %} Setting up the database {% endblock %}{% endblock %}
+
+{% block content %}
+
+<h3>Creating and updating the database</h3>
+<p>You can get my database setup tool from <a href="{% static 'scratchr/db-updater' %}">here</a>.</p>
+<p>Open it, then press any key to continue.</p>
+
+<h3>Setting up the access info</h3>
+<p>Rename C:\XAMPP\htdocs\scratchr\app\config\database.php.default to database.php</p>
+<p>Fill out the database access information. It should look like this:</p>
+<br/>
+<p>var $default = array(</p>
+<p>		'driver' => 'mysql',</p>
+<p>		'persistent' => false,</p>
+<p>		'host' => 'localhost',</p>
+<p>		'login' => 'root',</p>
+<p>		'password' => '',</p>
+<p>		'database' => 'scratchr',</p>
+<p>		'prefix' => '',</p>
+<p>	);</p>
+<br/>
+
+<p>The database is now set up!</p>
+<h4>Now with all of this done, head to <a href="../settings/">Tweaking some settings</a></h4>
+{% endblock content %}

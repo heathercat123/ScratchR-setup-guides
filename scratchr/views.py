@@ -15,3 +15,6 @@ def downloading_scratchr(request):
 
 def downloading_heather(request):
 	return render(request, "heatherscratchr/steps/4-downloading.html")
+
+def database(request):
+	return render(request, "scratchr-shared/steps/5-database.html")
