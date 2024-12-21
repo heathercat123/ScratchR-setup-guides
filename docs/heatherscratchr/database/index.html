@@ -1,0 +1,105 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Setting up the database  - ScratchR Setup Guides</title>
+		<link rel="stylesheet" href="/ScratchR-setup-guides/static/scratchr/skin/style.css" type="text/css" media="screen" />
+		<link rel="shortcut icon" type="image/x-icon" href="/ScratchR-setup-guides/static/scratchr/favicon.ico">
+	</head>
+<body>
+	<div id="globalWrapper">
+	
+	<!-- SCRATCH HEADER -->
+	<div id="header">
+		<div class="logo">
+			<a href="/ScratchR-setup-guides/"></a>
+		</div>
+		
+		<ul id="nav">
+			<li><a href="/ScratchR-setup-guides/">home</a></li>
+			<li><a href="https://scratch.mit.edu/explore/projects/all/">projects</a></li>
+			<li><a href="https://scratch.mit.edu/explore/studios/all/">galleries</a></li>
+			<li id="active"><a href="https://scratch.mit.edu/contact-us/">support</a></li>
+			<li><a href="https://scratch.mit.edu/discuss/">forums</a></li>
+			<li><a href="https://scratch.mit.edu/about/">about</a></li>
+			<li><a href="https://scratch.mit.edu/">my stuff</a></li>
+		</ul>
+		
+		<div id="userbar">
+			<a href="https://scratch.mit.edu/">Login or Sign up</a> for an account		</div>
+		
+		<div id="searchbar">
+			<form action="https://scratch.mit.edu/search/projects" id="cse-search-box">
+			<div>
+				<input type="text" name="q" size="31" />
+				<input type="submit" class="search" value="search "/>
+			</div>
+</form>
+		</div>
+	</div>
+	<!-- END SCRATCH HEADER -->
+	
+	<div id="column-content">
+	
+	<div id="content">
+		<h1 id="firstHeading" class="firstHeading"> Setting up the database </h1>
+		<div id="bodyContent">
+		
+
+<h3>Creating and updating the database</h3>
+<p>You can get my database setup tool from <a href="/ScratchR-setup-guides/static/scratchr/db-updater">here</a>.</p>
+<p>Open it, then press any key to continue.</p>
+
+<h3>Setting up the access info</h3>
+<p>Rename C:\XAMPP\htdocs\scratchr\app\config\database.php.default to database.php</p>
+<p>Fill out the database access information. It should look like this:</p>
+<br/>
+<p>var $default = array(</p>
+<p>		'driver' => 'mysql',</p>
+<p>		'persistent' => false,</p>
+<p>		'host' => 'localhost',</p>
+<p>		'login' => 'root',</p>
+<p>		'password' => '',</p>
+<p>		'database' => 'scratchr',</p>
+<p>		'prefix' => '',</p>
+<p>	);</p>
+<br/>
+
+<p>The database is now set up!</p>
+<h4>Now with all of this done, head to <a href="../settings/">Tweaking some settings</a></h4>
+
+		</div>
+	
+	</div>
+		
+	<div id="column-one">
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/wiki/Scratch_Wiki">Main page</a></li>
+				<li id="n-portal"><a href="/wiki/Scratch_Wiki:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-currentevents"><a href="/wiki/Scratch_Wiki:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		</div>
+		<!-- end of the left (by default at least) column -->
+		<div class="visualClear"></div>
+			
+		<div id="footer">
+			<a href="https://scratch.mit.edu/download">Download</a> | 
+			<a href="https://www.scratchfoundation.org/donate">Donate</a> | 
+			<a href="https://scratch.mit.edu/privacy_policy">Privacy Policy</a> | 
+			<a href="https://scratch.mit.edu/community_guidelines">Terms of Use</a> | 
+			<a href="https://scratch.mit.edu/terms_of_use">Copyright Policy</a> | 
+			<a href="https://scratch.mit.edu/contact-us">Contact Us </a>
+
+		</div>
+</div>
+</body>
+</html>
