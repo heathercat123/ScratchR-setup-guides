@@ -18,37 +18,37 @@
 <h3>Set up a VirtualHost</h3>
 <p>Open C:\XAMPP\APACHE\CONF\EXTRA\httpd-vhosts.conf in a text editor and add this at the end:</p>
 <br/>
-<p>&lt;VirtualHost 127.0.0.1&gt;</p>
-<p>&emsp;ServerName scratch.local</p>
-<p>&emsp;ServerAlias www.scratch.local</p>
-<p>&emsp;DocumentRoot C:/xampp/htdocs/scratchr/app/webroot/</p>
-<p>&emsp;&emsp;&lt;Directory /&gt;</p>
-<p>&emsp;&emsp;&emsp;Options FollowSymLinks</p>
-<p>&emsp;&emsp;&emsp;AllowOverride All</p>
-<p>&emsp;&emsp;&emsp;RewriteEngine   On</p>
-<p>&emsp;&emsp;&emsp;Options -Multiviews  FollowSymLinks</p>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+)_(sm|med).png$ static/icons/project/default_$2.jpg [QSA,L]</p>
+&lt;VirtualHost 127.0.0.1&gt;<br/>
+&emsp;ServerName scratch.local<br/>
+&emsp;ServerAlias www.scratch.local<br/>
+&emsp;DocumentRoot C:/xampp/htdocs/scratchr/app/webroot/<br/>
+&emsp;&emsp;&lt;Directory /&gt;<br/>
+&emsp;&emsp;&emsp;Options FollowSymLinks<br/>
+&emsp;&emsp;&emsp;AllowOverride All<br/>
+&emsp;&emsp;&emsp;RewriteEngine   On<br/>
+&emsp;&emsp;&emsp;Options -Multiviews  FollowSymLinks<br/>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+)_(sm|med).png$ static/icons/project/default_$2.jpg [QSA,L]<br/>
 <br/>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+).sb$ static/misc/default.sb [QSA,L]</p>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^static/projects/.+/([0-9]+).sb$ static/misc/default.sb [QSA,L]<br/>
 <br/>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^static/icons/gallery/(.*)$ static/icons/gallery/default.jpg [QSA,L]</p>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^static/icons/gallery/(.*)$ static/icons/gallery/default.jpg [QSA,L]<br/>
 <br/>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).jpg$ static/icons/buddy/default_$2.jpg [QSA,L]</p>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).jpg$ static/icons/buddy/default_$2.jpg [QSA,L]<br/>
 <br/>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).png$ static/icons/buddy/default_$2.jpg [QSA,L]</p>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^static/icons/buddy/([0-9]*)_(sm|med).png$ static/icons/buddy/default_$2.jpg [QSA,L]<br/>
 <br/>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-d</p>
-<p>&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f</p>
-<p>&emsp;&emsp;RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]</p>
-<p>&emsp;&emsp;RewriteRule .*\.svn/.* - [F]</p>
-<p>&emsp;&lt;/Directory&gt;</p>
-<p>&lt;/VirtualHost&gt;</p>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-d<br/>
+&emsp;&emsp;RewriteCond %{REQUEST_FILENAME} !-f<br/>
+&emsp;&emsp;RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]<br/>
+&emsp;&emsp;RewriteRule .*\.svn/.* - [F]<br/>
+&emsp;&lt;/Directory&gt;<br/>
+&lt;/VirtualHost&gt;<br/>
 <br/>
-<p>The settings are now set up!</p>
+<p>The settings are now configured!</p>
 <h4>Now with all of this done, head to <a href="../testit/">Testing it out</a></h4>
 {% endblock content %}
